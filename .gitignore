@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+
+# js
+node_modules
+
+# Editor
+.idea
+
+# Project
+
+!*.gitkeep
+yarn.lock
+package-lock.json
