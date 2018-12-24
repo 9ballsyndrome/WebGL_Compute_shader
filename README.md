@@ -20,7 +20,7 @@ In some environments, it could run well only after adding this flag. So try this
 ## Boids simulation
 
 Interaction calculations such as Boids simulation are suited for Compute shader because it can be run in parallel.
-In this demo, it calculates coordinates and velocities of each Boids using Compute shader, and draw them using Instancing.
+In this demo, it calculates coordinates and velocities of each Boids using Compute shader, and draws them using Instancing.
 **In CPU, it is not doing anything except calling graphics API**.
 
 [![181218_webgl-compute-boids_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-boids_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-boids/dist/)
@@ -49,3 +49,14 @@ This is for the first step to implement Compute shader. It copies an array defin
 
 - [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-simple/dist/)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-simple)
+
+## Vertex Compute shader
+
+We can bind Shader Storage Buffer Object as ARRAY_BUFFER and use it as vertex attribute in Vertex shader.
+So, we can use the result, calculated in Compute shader, in Vertex shader without going through CPU. This means there is no memory copy between CPU and GPU.
+In this sample, it calculates particle coordinates in Compute shader and writes the result to Shader Storage Buffer Object, then renders the particle using it as attribte in Vertex shader.
+
+[![181225_webgl-compute-vertex_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181225_webgl-compute-vertex_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/dist/)
+
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/dist/)
+- [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-vertex)
