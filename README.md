@@ -5,10 +5,12 @@ This repository shows samples of WebGL Compute shader. For detail, see [Intent t
 As of Dec 2018, WebGL Compute shader runs only in **Windows [Chrome Canary](https://www.google.com/chrome/canary/)** launched with below command line flags.
 
 - `--enable-webgl2-compute-context`  
-Enable WebGL Compute shader, WebGL2ComputeRenderingContext
+Enable WebGL Compute shader, WebGL2ComputeRenderingContext  
+Or you can enable this flag via chrome://flags/, choose "WebGL 2.0 Compute"
 
 - `--use-angle=gl`  
-Run ANGLE with OpenGL backend because Shader Storage Buffer Object is now on implementing and does not work well in D3D backend yet
+Run ANGLE with OpenGL backend because Shader Storage Buffer Object is now on implementing and does not work well in D3D backend yet  
+Or you can enable this flag via chrome://flags/, choose "Choose ANGLE graphics backend"
 
 - `--use-cmd-decoder=passthrough`  
 In some environments, it could run well only after adding this flag. So try this if could not work with above two flags
