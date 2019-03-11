@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <meta name="google" content="notranslate"/>
     <title>WebGL ComputeShader BitonicSort Demo</title>
     <link rel="stylesheet" href="css/style.css"/>
-    <script defer src="js/bundle.js"></script>
-</head>
-<body>
-<div id="error">
-    <h2>WebGL 2.0 Compute not available</h2>
-    <p>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="error">
+      <h2>WebGL 2.0 Compute not available</h2>
+      <p>
         Make sure you are on a system with WebGL 2.0 Compute enabled.
         Windows <a href="https://www.google.com/intl/ja_ALL/chrome/canary/" target="_blank">Chrome Canary</a> with Command Line Switches:
         "--enable-webgl2-compute-context" and "--use-angle=gl".
-    </p>
-</div>
-<div id="contents">
-    <h1>Bitonic sort demo using WebGL Compute shader</h1>
-    <p>This demo sorts an array with selected number of elements by CPU and GPU, then compares each elapsed time.</p>
-    <label for="selectBox">number of elements：</label>
-    <select id="selectBox"></select>
-    <div id="log">
+      </p>
     </div>
-</div>
-
-</body>
+    <div id="contents">
+      <h1>Bitonic sort demo using WebGL Compute shader</h1>
+      <p>This demo sorts an array with selected number of elements by CPU and GPU, then compares each elapsed time.</p>
+      <label for="selectBox">number of elements：</label>
+      <select id="selectBox"></select>
+      <div id="log">
+      </div>
+    </div>
+  </body>
 </html>

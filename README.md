@@ -18,8 +18,9 @@ In some environments, it could run well only after adding this flag. So try this
 
 *Note that some environments could not run WebGL Compute shader, especially in older GPU nor display driver (nor perhaps integrated GPU).
 
+## Experiments
 
-## Boids simulation
+### Boids simulation
 
 Interaction calculations such as Boids simulation are suited for Compute shader because it can be run in parallel.
 In this demo, it calculates coordinates and velocities of each Boids using Compute shader, and draws them using Instancing.
@@ -28,37 +29,39 @@ In this demo, it calculates coordinates and velocities of each Boids using Compu
 [![181218_webgl-compute-boids_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-boids_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-boids/dist/)
 
 - [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-boids/dist/)
-- [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-boids)
+- [Source(TypeScript)](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-boids)
 
 
-## Bitonic sort
+### Bitonic sort
 
 Bitonic sort is one of the sort algorithm that can be executed in parallel. This demo sorts an array with selected number of elements by CPU (JavaScript built-in `sort()`) and GPU (Compute shader), then compares each elapsed time.
 In CPU sort, it simply measures the time to execute `sort()`. In GPU sort, it measures **the total time** to copy the array to GPU, execute Bitonic sort in Compute shader and copy the result data back to CPU.
 Note that WebGL initialization time, for example shader compile, is not included.
 
-[![181218_webgl-compute-bitonicSort_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-bitonicSort_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-bitonicSort/dist/)
+[![181218_webgl-compute-bitonicSort_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-bitonicSort_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-bitonicSort)
 
-- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-bitonicSort/dist/)
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-bitonicSort)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-bitonicSort)
 
 
-## Simplest Compute shader
+## Tutorial
+
+### Simplest Compute shader
 
 This is for the first step to implement Compute shader. It copies an array defined in CPU to GPU as the input data, writes its thread index to the array through Shader Storage Buffer Object in Compute shader, then copies the result data back to CPU and read it.
 
-[![181218_webgl-compute-simple_demo.png](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-simple_demo.png)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-simple/dist/)
+[![181218_webgl-compute-simple_demo.png](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181218_webgl-compute-simple_demo.png)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-simple)
 
-- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-simple/dist/)
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-simple)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-simple)
 
-## Vertex Compute shader
+### Vertex Compute shader
 
 We can bind Shader Storage Buffer Object as ARRAY_BUFFER and use it as vertex attribute in Vertex shader.
 So, we can use the result, calculated in Compute shader, in Vertex shader without going through CPU. This means there is no memory copy between CPU and GPU.
 In this sample, it calculates particle coordinates in Compute shader and writes the result to Shader Storage Buffer Object, then renders the particle using it as attribte in Vertex shader.
 
-[![181225_webgl-compute-vertex_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181225_webgl-compute-vertex_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/dist/)
+[![181225_webgl-compute-vertex_demo.gif](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/181225_webgl-compute-vertex_demo.gif)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/)
 
-- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/dist/)
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-vertex)
