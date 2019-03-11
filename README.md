@@ -2,11 +2,11 @@
 
 This repository shows samples of WebGL Compute shader. For detail, see [Intent to Implement: WebGL 2.0 Compute](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/bPD47wqY-r8/5DzgvEwFBAAJ) and [WebGL 2.0 Compute Specification - Proposal](https://docs.google.com/document/d/1EwhDJO_lBH1mGMMwheQUXGhhFk9yoC98Ant3TPqwmmA/view).
 
-As of Dec 2018, WebGL Compute shader runs only in **Windows [Chrome Canary](https://www.google.com/chrome/canary/)** launched with below command line flags.
+As of Mar 2019, WebGL Compute shader runs only in **Windows Google Chrome** launched with below command line flags.
 
 - `--enable-webgl2-compute-context`  
 Enable WebGL Compute shader, WebGL2ComputeRenderingContext  
-Or you can enable this flag via chrome://flags/, choose "WebGL 2.0 Compute"
+Or you can enable this flag via chrome://flags/ if using [Chrome Canary](https://www.google.com/chrome/canary/) or [Chrome Dev](https://www.google.com/chrome/dev/), choose "WebGL 2.0 Compute"
 
 - `--use-angle=gl`  
 Run ANGLE with OpenGL backend because Shader Storage Buffer Object is now on implementing and does not work well in D3D backend yet  
@@ -16,7 +16,9 @@ Or you can enable this flag via chrome://flags/, choose "Choose ANGLE graphics b
 In some environments, it could run well only after adding this flag. So try this if could not work with above two flags
 
 
-*Note that some environments could not run WebGL Compute shader, especially in older GPU nor display driver (nor perhaps integrated GPU).
+*Note that some environments could not run WebGL Compute shader, especially in older GPU nor display driver (nor perhaps integrated GPU)*.
+
+*WebGL 2.0 Compute API is now implementing. So if you try to develop, [Chrome Canary](https://www.google.com/chrome/canary/) is recommended as the latest feature-update and bug-fix are Nightly provided*.
 
 ## Experiments
 
