@@ -179,9 +179,8 @@ export class Main
       uint threadIndex = gl_GlobalInvocationID.x;
       //ssboOut.data[threadIndex].position = ssboIn.data[threadIndex].position + ssboIn.data[threadIndex].velocity;
       
-      Boids boids = ssboIn.data[threadIndex];
-      vec3 position = boids.position;
-      vec3 velocity = boids.velocity;
+      vec3 position = ssboIn.data[threadIndex].position;
+      vec3 velocity = ssboIn.data[threadIndex].velocity;
       
       vec3 separetePositionSum = vec3(0.0);
       int separeteCount = 0;
@@ -193,8 +192,11 @@ export class Main
       int cohesionCount = 0;
       
       for(uint j = 0u; j < gl_WorkGroupSize.x; j++) {
-        uint offset = j * gl_WorkGroupSize.x;
-        sharedData[gl_LocalInvocationID .x] = ssboIn.data[offset + gl_LocalInvocationID .x];
+        uint sharedIndex = j * gl_WorkGroupSize.x + gl_LocalInvocationID.x;
+        Boids sharedBoids;
+        sharedBoids.position = ssboIn.data[sharedIndex].position;
+        sharedBoids.velocity = ssboIn.data[sharedIndex].velocity;
+        sharedData[gl_LocalInvocationID.x] = sharedBoids;
         memoryBarrierShared();
         barrier();
         for(uint i = 0u; i < gl_WorkGroupSize.x; i++) {
