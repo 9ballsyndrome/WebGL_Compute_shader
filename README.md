@@ -68,3 +68,12 @@ In this sample, it calculates particle coordinates in Compute shader and writes 
 
 - [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-vertex/)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-vertex)
+
+### Texture Compute shader
+
+There are two ways to output the result from Compute shader. One is using SSBO as mentioned above, and the other is using Texture. Texture bound from JavaScript side using `bindImageTexture()`, new API added by WebGL 2.0 Compute, can be read and written by Compute shader through `imageLoad()`/`imageStore ()`. Note that Texture to specify to `bindImageTexture()` should be immutable. "Immutable" means Texture has been allocated by using `texStorageXX()`, not `texImageXX()`. Now, we can create procedural textures or execute image processing without any vertices.
+
+[![190409_webgl-compute-texture_demo.png](https://raw.githubusercontent.com/9ballsyndrome/WebGL_Compute_shader/master/document/190409_webgl-compute-texture_demo.png)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-texture/)
+
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-texture/)
+- [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-texture)
