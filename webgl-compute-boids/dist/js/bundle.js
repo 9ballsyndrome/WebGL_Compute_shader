@@ -7304,11 +7304,11 @@ class Main_Main {
         }
         const instanceAttribute = this.model.getVertexBuffer('instancePosition').buffer;
         context.bindBuffer(context.ARRAY_BUFFER, instanceAttribute);
-        context.bufferData(context.ARRAY_BUFFER, instanceAttributeData, this.context.STATIC_DRAW);
+        context.bufferData(context.ARRAY_BUFFER, instanceAttributeData, this.context.DYNAMIC_COPY);
         this.ssboIn = instanceAttribute;
         this.ssboOut = context.createBuffer();
         context.bindBuffer(context.ARRAY_BUFFER, this.ssboOut);
-        context.bufferData(context.ARRAY_BUFFER, instanceAttributeData, this.context.STATIC_DRAW);
+        context.bufferData(context.ARRAY_BUFFER, instanceAttributeData, this.context.DYNAMIC_COPY);
         const instanceColor = this.model.getVertexBuffer('instanceColor').buffer;
         context.bindBuffer(context.ARRAY_BUFFER, instanceColor);
         context.bufferData(context.ARRAY_BUFFER, instanceColorData, this.context.STATIC_DRAW);

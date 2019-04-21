@@ -49,7 +49,7 @@ const script = async () => {
   // create ShaderStorageBuffer
   const ssbo = context.createBuffer();
   context.bindBuffer(context.SHADER_STORAGE_BUFFER, ssbo);
-  context.bufferData(context.SHADER_STORAGE_BUFFER, input, context.STATIC_DRAW);
+  context.bufferData(context.SHADER_STORAGE_BUFFER, input, context.DYNAMIC_COPY);
   context.bindBufferBase(context.SHADER_STORAGE_BUFFER, 0, ssbo);
 
   // execute ComputeShader

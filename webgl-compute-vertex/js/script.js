@@ -69,7 +69,7 @@ const script = async () => {
   // create ShaderStorageBuffer
   ssbo = context.createBuffer();
   context.bindBuffer(context.SHADER_STORAGE_BUFFER, ssbo);
-  context.bufferData(context.SHADER_STORAGE_BUFFER, new Float32Array(NUM_PARTICLES * 2), context.STATIC_DRAW);
+  context.bufferData(context.SHADER_STORAGE_BUFFER, new Float32Array(NUM_PARTICLES * 2), context.DYNAMIC_COPY);
   context.bindBufferBase(context.SHADER_STORAGE_BUFFER, 0, ssbo);
 
   // VertexShader source
