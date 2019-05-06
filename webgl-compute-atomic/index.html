@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="google" content="notranslate"/>
+    <title>WebGL Atomic Counter Demo</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="error">
+      <div id="contextError">
+        <h2>WebGL 2.0 Compute not available</h2>
+        <p>
+          Make sure you are on a system with WebGL 2.0 Compute enabled.
+          Windows Google Chrome or <a href="https://www.microsoftedgeinsider.com/en-us/download/?platform=win10">Microsoft Edge Insider Channels</a> with Command Line Switches:
+          "--enable-webgl2-compute-context", "--use-angle=gl" and "--use-cmd-decoder=passthrough".
+        </p>
+      </div>
+      <div id="atomicCounterError">
+        <h2>Atomic Counter in Fragment shader not available</h2>
+        <p>
+          MAX_FRAGMENT_ATOMIC_COUNTERS is zero in this environment.
+          Launching with Command Line Switches "--use-angle=gl" may help this issue.
+        </p>
+      </div>
+    </div>
+    <div id="contents">
+      <canvas id="myCanvas"></canvas>
+    </div>
+  </body>
+</html>
