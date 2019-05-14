@@ -2,7 +2,7 @@
 
 This repository shows samples of WebGL Compute shader. For detail, see [Intent to Implement: WebGL 2.0 Compute](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/bPD47wqY-r8/5DzgvEwFBAAJ) and [WebGL 2.0 Compute Specification - Draft](https://www.khronos.org/registry/webgl/specs/latest/2.0-compute/).
 
-As of Apr 2019, WebGL Compute shader runs only on **Windows(or Linux) Google Chrome or Windows [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download/?platform=win10)** launched with below command line flags.
+As of May 2019, WebGL Compute shader runs only on **Windows(or Linux) Google Chrome or Windows [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download/?platform=win10)** launched with below command line flags.
 
 - `--enable-webgl2-compute-context`  
 Enable WebGL Compute shader, WebGL2ComputeRenderingContext  
@@ -16,6 +16,9 @@ Or you can enable this flag via about://flags/, choose "Choose ANGLE graphics ba
 - `--use-cmd-decoder=passthrough`  
 In some environments, it could run well only after adding this flag. So try this if could not work with above two flags
 
+- `--use-gl=angle`  
+Run OpenGL with ANGLE  
+On Linux, you must specify this explicitly. On Windows, this flag is not needed because ANGLE will be used by default
 
 *Note that some environments could not run WebGL Compute shader, especially in older GPU nor display driver*.
 
