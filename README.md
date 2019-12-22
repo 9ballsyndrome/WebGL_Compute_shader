@@ -49,6 +49,17 @@ Note that WebGL initialization time, for example shader compile, is not included
 - [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://9ballsyndrome.github.io/WebGL_Compute_shader/webgl-compute-bitonicSort)
 - [Source](https://github.com/9ballsyndrome/WebGL_Compute_shader/tree/master/webgl-compute-bitonicSort)
 
+### Ray tracer
+
+This demo shows how to do ray tracing in a web browser using compute shaders. This ray tracer use progressive rendeing to obtain interactive and real-time frame rate.
+
+Photorealistic rendering is hard to obtain using the regular WebGL pipeline. But thanks to *WebGL Compute*, we can now implement expensive rendering algorithms in the browser.
+
+[![raytracing.jpg](document/raytracing.jpg)](https://oktomus.github.io/webgpu-toy-ray-tracer/)
+
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://oktomus.github.io/webgpu-toy-ray-tracer/)
+- [Source](https://github.com/oktomus/webgpu-toy-ray-tracer)
+
 
 ## Tutorial
 
