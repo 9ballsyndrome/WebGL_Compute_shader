@@ -57,8 +57,8 @@ Photorealistic rendering is hard to obtain using the regular WebGL pipeline. But
 
 [![raytracing.jpg](document/raytracing.jpg)](https://oktomus.github.io/webgpu-toy-ray-tracer/)
 
-- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://oktomus.github.io/webgpu-toy-ray-tracer/)
-- [Source](https://github.com/oktomus/webgpu-toy-ray-tracer)
+- [View demo (Make sure you are on a system with WebGL 2.0 Compute enabled)](https://oktomus.com/web-experiments/webgl-compute/toy-raytracer/)
+- [Source](https://github.com/oktomus/web-experiments/tree/master/webgl-compute/toy-raytracer)
 
 
 ## Tutorial
